@@ -242,16 +242,52 @@
         <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">
+              <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="{{ route('home.index')}}">
                 <svg class="bi"><use xlink:href="#house-fill"/></svg>
                 Dashboard
               </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('/user') }}">
+                <a class="nav-link" href="{{ route('user.index') }}">
                     <svg class="bi"><use xlink:href="#file-earmark-text"></use></svg>
                     {{ __('User') }}
                 </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('produk.index') }}">
+                    <svg class="bi"><use xlink:href="#file-earmark-text"></use></svg>
+                    {{ __('Produk') }}
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('alamat.index') }}">
+                    <svg class="bi"><use xlink:href="#file-earmark-text"></use></svg>
+                    {{ __('Alamat') }}
+                </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('province.index') }}">
+                <svg class="bi">
+                  <use xlink:href="#file-earmark-text"></use>
+                </svg>
+                {{ __('Province') }}
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('city.index') }}">
+                <svg class="bi">
+                  <use xlink:href="#file-earmark-text"></use>
+                </svg>
+                {{ __('City') }}
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('transaksi.daftar.produk') }}">
+                <svg class="bi">
+                  <use xlink:href="#file-earmark-text"></use>
+                </svg>
+                {{ __('Transaksi') }}
+              </a>
             </li>
             <!-- -->
           </ul>
@@ -260,9 +296,9 @@
 
           <ul class="nav flex-column mb-auto">
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="{{route('logout')}}">
                 <svg class="bi"><use xlink:href="#door-closed"/></svg>
-                Sign out
+                Logout
               </a>
             </li>
           </ul>
@@ -294,5 +330,8 @@
 <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 
     <script src="{{ asset('js/dashboard.js') }}"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </body>
 </html>
